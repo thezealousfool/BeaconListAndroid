@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NavCog</string>
+    <string name="app_description">iBeacon scanning application</string>
+    <string name="start_action">Start Scan</string>
+</resources>

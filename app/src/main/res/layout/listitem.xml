@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/rssi"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:text="-83"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rssiText" />
+
+        <TextView
+            android:id="@+id/rssiText"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="RSSI"
+            app:layout_constraintEnd_toEndOf="@+id/rssi"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="right"
+            app:constraint_referenced_ids="rssiText,rssi"
+            tools:layout_editor_absoluteX="422dp" />
+
+        <TextView
+            android:id="@+id/majorText"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Major"
+            app:layout_constraintBaseline_toBaselineOf="@+id/major"
+            app:layout_constraintStart_toEndOf="@+id/barrier" />
+
+        <TextView
+            android:id="@+id/minorText"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Minor"
+            app:layout_constraintBaseline_toBaselineOf="@+id/major"
+            app:layout_constraintStart_toEndOf="@+id/major" />
+
+        <TextView
+            android:id="@+id/major"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="65535"
+            app:layout_constraintStart_toEndOf="@+id/majorText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/minor"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="7"
+            app:layout_constraintBaseline_toBaselineOf="@+id/minorText"
+            app:layout_constraintStart_toEndOf="@+id/minorText" />
+
+        <TextView
+            android:id="@+id/uuidText"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UUID"
+            app:layout_constraintBaseline_toBaselineOf="@+id/uuid"
+            app:layout_constraintStart_toStartOf="@+id/majorText" />
+
+        <TextView
+            android:id="@+id/uuid"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="F7826DA6-4FA2-4E98-8024-BC5B71E0893E"
+            app:layout_constraintStart_toEndOf="@+id/uuidText"
+            app:layout_constraintTop_toBottomOf="@+id/major" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
